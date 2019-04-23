@@ -4,9 +4,8 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -15,9 +14,8 @@ import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Filters.gt;
 import static com.mongodb.client.model.Updates.inc;
 
+@Slf4j
 public class MongoCrudDemo {
-
-    private static Logger log = LoggerFactory.getLogger(MongoCrudDemo.class);
 
     public static void main(String[] args) {
         MongoClient client = MongoClients.create("mongodb://localhost:27017");
